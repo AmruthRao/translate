@@ -12,7 +12,7 @@ function formTranslationUrl(text){
 function errorHandler()
 {
     alert("Something wrong with server! Please try again after some time");
-    console.log("Error occured");
+    console.log("Error occured",error);
     
 }
 function callTranslationApi(text)
