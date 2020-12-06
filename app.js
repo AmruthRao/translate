@@ -4,6 +4,7 @@ var outputDiv=document.querySelector("#output")
 //outputDiv.innerText = "I am Amruth"
 //console.log(outputDiv)
 var baseurl="https://api.funtranslations.com/translate/minion.json"
+//var baseurl="https://api.funtranslations.com/translate/anyone.json"
 //var baseurl="https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
 function formTranslationUrl(text){
     var formedurl = baseurl + "?text=" + text
