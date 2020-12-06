@@ -9,11 +9,18 @@ function formTranslationUrl(text){
     var formedurl = baseurl + "?text=" + text
     return formedurl
 }
+function errorHandler()
+{
+    alert("Something wrong with server! Please try again after some time");
+    console.log("Error occured");
+    
+}
 function callTranslationApi(text)
 {
     fetch(formTranslationUrl(text))
     .then(response => response.json())
     .then(json=>outputDiv.innerText =json.contents.translated)
+    .catch(errorHandler)
 }
 function btnclickHandler(){
     callTranslationApi(txtInput.value)
