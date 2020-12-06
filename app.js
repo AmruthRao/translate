@@ -3,8 +3,20 @@ var txtInput=document.querySelector("#txt-input")
 var outputDiv=document.querySelector("#output")
 //outputDiv.innerText = "I am Amruth"
 //console.log(outputDiv)
+var baseurl="https://api.funtranslations.com/translate/minion.json"
+//var baseurl="https://lessonfourapi.tanaypratap.repl.co/translate/yoda.json"
+function formTranslationUrl(text){
+    var formedurl = baseurl + "?text=" + text
+    return formedurl
+}
+function callTranslationApi(text)
+{
+    fetch(formTranslationUrl(text))
+    .then(response => response.json())
+    .then(json=>outputDiv.innerText =json.contents.translated)
+}
 function btnclickHandler(){
-    outputDiv.innerText = " asasakjsjd " + txtInput.value
+    callTranslationApi(txtInput.value)
  }
 btnTranslate.addEventListener("click",btnclickHandler)
 
