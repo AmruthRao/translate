@@ -10,7 +10,7 @@ function formTranslationUrl(text){
     var formedurl = baseurl + "?text=" + text
     return formedurl
 }
-function errorHandler()
+function errorHandler(error)
 {
     alert("Something wrong with server! Please try again after some time");
     console.log("Error occured",error);
