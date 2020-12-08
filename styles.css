@@ -1,8 +1,11 @@
+
 body{
     background-image: url(images/back.jpg);
     max-width: 1200px;
     margin: auto;
     margin-top: 1rem;
+    font-family: 'Nerko One', cursive;
+
 }   
 .container{
     border-radius:1rem;
